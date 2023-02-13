@@ -5,6 +5,17 @@ const nhost = new NhostClient({
 });
 
 const request = (async () => {
+  // Sign in user
+  const signInResponse = await nhost.auth.signIn({
+    email: 'testuser@gmail.com',
+    password: 'password',
+  })
+
+  // Handle sign-in error
+  if (signInResponse.error) {
+    throw signInResponse;
+  }
+
   // nhost.graphql.request returns a promise, so we use await here
   const todos = await nhost.graphql.request(`
     query {
