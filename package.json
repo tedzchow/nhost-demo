@@ -1,0 +1,13 @@
+{
+  "name": "nhost-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:bitsbuildomniverse/nhost-demo.git",
+  "author": "Ted",
+  "license": "MIT",
+  "dependencies": {
+    "@nhost/nhost-js": "^1.13.2",
+    "graphql": "^16.6.0"
+  },
+  "type": "module"
+}
